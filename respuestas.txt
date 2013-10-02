@@ -1,0 +1,26 @@
+18. En la salida se muestra la cadena "Hola Mundo", seguida
+de un salto de línea (característica propia del comando 'puts'.
+También aparece una línea " => nil", que significa que el resultado
+de la operación anterior es nulo.
+
+21. La diferencia radica en cómo se interpretan las comillas simples
+y dobles: Si esta cadena se pone entre comillas simples no se interpreta
+y el resultado por la línea de comandos será "\t\n"; sin embargo, si 
+se usan comillas dobles, se evaluan esas expresiones, que en Ruby significan
+una tabulación y un salto de línea, por lo que la línea resultante está
+aparentemente vacía.
+
+22. El operador %q hace que una cadena no se interpole en el intérprete,
+a excepcion de los caracteres \\ \[ y \]. Por ello, la línea "%q{hello world\n}"
+ da como resultado "hello world\\n", y la línea "%q{'a' 'b' 'c'}" da como 
+resultado "'a' 'b' 'c'".
+
+23. El operador %Q sí interpola la cadena en el intérprete. Por tanto, la línea 
+"%Q{hello world\n} da como resultado "hello world\n", y la línea %Q{"a" "b" "c"}
+da como resultado "\"a\" \"b\" \"c\""
+
+24. En c quedará "--4-- \n--2-- \n". Si hacemos un puts c, se mostrará el resultado con los \n interpretados como saltos de línea.
+
+25. En c quedará "--\#{a}-- \n--\#{b}-- \n". Si hacemos un puts c, vemos que no se interpola ni a ni b.
+
+
