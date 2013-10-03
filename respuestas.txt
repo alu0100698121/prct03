@@ -23,4 +23,71 @@ da como resultado "\"a\" \"b\" \"c\""
 
 25. En c quedará "--\#{a}-- \n--\#{b}-- \n". Si hacemos un puts c, vemos que no se interpola ni a ni b.
 
+26. La primera expresión da como resultado "he"; la segunda da
+como resultado "o"; y la tercera da como resultado "hello". Las expresiones de los corchetes indican el intervalo de caracteres que se quieren mostrar de la cadena en cuestión.
 
+27. En g quedará como resultado la cadena "hello world".
+
+28. En e quedará como resultado la cadena "...".
+
+29. El resultado que devuelve es "2 2 2 ".
+
+30. %w[this is a test] es un array de cuatro cadenas de caracteres (this, is, a, test).
+
+31. %w[\t \n] es un array de cadenas de caracteres. El parámetro
+%w hace que no se interpolen las expresiones que haya en el array.
+
+32. %W[\t \n] es un array de cadena de caracteres. El parámetro
+%W hace que sí se interpolen las expresiones que haya en el array.
+
+33. nils es un array de 3 posiciones que contienen el valor nil.
+
+34. zeros es un array de 3 posiciones que contienen el valor 0.
+
+35. En b queda un array [[1,2],[3,4]].
+
+36. En c queda un array [0, 2, 4].
+
+37. Primeramente, se crea un array de 5 espacios con las letras de la a a la e. Posteriormente, se consultan las posiciones indicadas en los corchetes, teniendo en cuenta que:
+   - Si una posición es negativa, significa que empieza a contar
+     desde el final.
+   - Si el separador es una coma, se muestra hasta el segundo
+     valor, sin incluirlo.
+   - Si el separador es dos puntos seguidos, se muestra hasta
+     el segundo valor incluido.
+
+38. Teniendo el array anterior, las operaciones hacen poner en los espacios 0 y 1 (gracias al operador [0,2]) una A y una B, poner C, D y E (gracias al operador [2..5]), modificar las primras posiciones y añadir los números 1, 2 y 3, borrar las dos primeras posiciones del array, poner una Z en la última posición del array, y por último, poner a nil las dos últimas posiciones del array.
+
+39. Primeramente, se crea un array con las posiciones numeradas del 1 al 4; posteriormente, se añaden dos nuevas posiciones con los números 4 y 5; luego, se añade una nueva posición que contendrá un "subarray" de tres posiciones con 6, 7 y 8; y por último, no se puede efectuar la operación a = a + 9, ya que no puede transformar un número en un array (podemos solucionarlo poniendo el 9 entre corchetes).
+
+40. Se crea un array con las letras a b c b a, y después se "restan" o se eliminan las b, c y d (que no existen) del array.
+
+41. Se crea un array con 8 posiciones rellenadas con ceros.
+
+42. Primero, se crea un array vacío, y se van añadiendo posiciones.
+
+43. Primero, se rellenan los arrays a y b con los números en cuestión, y posteriormente, se hacen operaciones sobre conjuntos: C y d contendrán la unión de los elementos de a y b; y e y f contendrán la intersección de a y b.
+
+44. En primer lugar se crea un rango en la variable a. Esto se sabe gracias al método class, que devuelve el el tipo de un objeto. Posteriormente, este rango se convierte en un array. Luego, se hace lo mismo con b y luego se usa el método include? seguido de un parámetro para saber si ese parámetro se encuentra dentro del objeto. Luego, se itera para obtener los valores de b con step: entre paréntesis se indica el número de aumentos que lleva el iterador en cada iteración, y a continuación, se indica el bloque a iterar. por último, se intenta cambiar de tipo a un rango a un array, pero esta operación no es posible, dado que este rango no ha sido almacenado en una variable.
+
+45. En este caso, se introduce un rango en r y se pregunta si 50 es un elemento de ese rango con el metodo member? y el parámetro 50. Posteriormente, se aplica la misma operacion pero con el método include?. Todas las afirmaciones de este ejercicio son verdaderas, ya que todos los parámetros pertencen al rango.
+
+46. Primero se consulta el tipo de los objetos true y false, dando lugar a instancia de las clases TrueClass y FalseClass. Luego, se ejecutan sentencias puts condicionadas por el resultado que éstas darán, por lo que si se muestran o no en pantalla depende del resultado de la función.
+
+47. En este caso, comenzamos asignando a x el símbolo :sym. Esto lo comprobamos al preguntar por su tipo con el método class. Posteriormente, se hace la comprobación de que un símbolo no es lo mismo que una simple cadena de caracteres al preguntar por la igualdad x == 'sym'. Luego, se asigna a z un símbolo con un nombre más largo entre comillas simples. Por último, se hacen varias conversiones de tipo: de cadena de caracteres a símbolo, y viceversa.
+
+48. Se define una cadena s con valor "Ruby"; después se iguala una cadena t a la cadena s, y se "elimina" el último valor de la cadena (Se iguala a ""). Cuando hacemos un print a s, observamos que también cambia la cadena a la que se igualó, ya que el borrado se hizo a t. En cambio, si se hace una reasignación de t (t = "Java"), s permanece como estaba antes de la reasignación. Esto se observa en la sentencia print s, t, ya que s contiene "Rub" y t "Java".
+
+49. En este caso, se hace uso de una cadena de caracteres con formato. Primero, se indica que los elementos que compondrán la cadena serán un número decimal y una string (con los operandos "%s %s"), y posteriormente se usa el operador % que indica que se le dará formato a la cadena, y por último, entre corchetes, los elementos que confromarán la cadena.
+
+50. Aquí se hacen asignaciones múltiples de variables. Por ejemplo, en la primera sentencia, se asigna en una misma sentencia el valor 4 a x y el 5 a y (x, y = 4, 5). Luego, el valor de z viene dado por una sentencia condicional (x > y ? x : y), y tomará el valor del mayor de los valores entre x e y. Por último, se hace de nuevo una asignación de tres variables en una misma línea, tomando cada variable el respectivo valor del orden en el que se escriben.
+
+51. En este ejercicio se comienza a trabajar con hashes. Primero, se define a x como un hash con las claves a=>1 y b=>2. Los métodos keys y values muestran las claves y los valores existentes en el hash, respectivamente. Posteriormente, se añade una nueva clave c con valor 3 (x[:c] = 3). Luego, se trata de borrar de x el valor 'a', el cual no existe literalmente como una cadena. A continuación, sí se elimina la clave a, ya que se respeta la sintaxis correcta del símbolo (x.delete(:a)). Por último, se reasigna el hash a unos nuevos valores y se hace un elminiado condicionado; en este caso, se eliminarán los valores que sean pares (x.delete_if { |k,v| v % 2 == 0 }).
+
+52. Si ejecutamos yield 4, 5 nos aparece un error, ya que no se especifica ningún bloque.
+
+53. Ambas expresiones crean un hash vacío, y no hay diferencia entre ellas.
+
+54. Esta expresión retorna el número de palabras que tiene la cadena (gracias a la función scan, y más concretamente al parámetro /\w+/).
+
+55. En este caso se intenta ordenar en un array las claves del hash creado en c, y mostrarlas depués por pantalla, pero hay un error en la comparación entre símbolos, ya que el operador <=> usado en el metodo sort no funciona para este tipo de objetos.
